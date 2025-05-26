@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYKILLO_NBA - Apuestas Deportivas de Baloncesto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define la fuente Inter para todo el documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilos personalizados para un mejor diseño */
+        .card {
+            background-color: #1a202c; /* Color de fondo oscuro para las tarjetas */
+            border-radius: 0.75rem; /* Bordes redondeados */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+            padding: 2rem;
+            color: #e2e8f0; /* Color de texto claro */
+        }
+        .btn-primary {
+            background-color: #4299e1; /* Azul vibrante para botones */
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #3182ce; /* Azul más oscuro al pasar el ratón */
+            transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+        }
+        /* Estilos específicos para la tabla de estadísticas */
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .stats-table th, .stats-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #2d3748; /* Borde oscuro para las filas */
+        }
+        .stats-table th {
+            background-color: #2d3748; /* Fondo oscuro para los encabezados */
+            font-weight: bold;
+            color: #cbd5e0; /* Color claro para el texto del encabezado */
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+        .stats-table tbody tr:hover {
+            background-color: #2a4365; /* Fondo ligeramente diferente al pasar el ratón */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
+
+    <header class="w-full max-w-4xl flex flex-col sm:flex-row items-center justify-between bg-gray-800 p-6 rounded-xl shadow-lg mb-8">
+        <div class="flex items-center mb-4 sm:mb-0">
+            <img src="https://placehold.co/60x60/3182ce/ffffff?text=LOGO" alt="LYKILLO_NBA Logo" class="w-16 h-16 rounded-full mr-4 border-2 border-blue-400">
+            <h1 class="text-5xl font-extrabold text-blue-400">LYKILLO_NBA</h1>
+        </div>
+        <p class="text-lg text-gray-400 text-center sm:text-right">Tu fuente número uno para apuestas de baloncesto.</p>
+    </header>
+
+    <main class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <section class="card">
+            <h2 class="text-3xl font-bold text-blue-300 mb-4">Apuestas NBA</h2>
+            <p class="text-gray-300 mb-6">
+                Sumérgete en la emoción de la NBA con nuestros análisis y pronósticos.
+                Desde la temporada regular hasta los playoffs y las finales, te ofrecemos las mejores cuotas y consejos para tus apuestas.
+            </p>
+            <ul class="list-disc list-inside text-gray-400 mb-6">
+                <li>Análisis de partidos diarios</li>
+                <li>Pronósticos de rendimiento de jugadores</li>
+                <li>Estrategias para apuestas en vivo</li>
+            </ul>
+            <button class="btn-primary w-full">Ver Pronósticos NBA</button>
+        </section>
+
+        <section class="card">
+            <h2 class="text-3xl font-bold text-pink-300 mb-4">Apuestas WNBA</h2>
+            <p class="text-gray-300 mb-6">
+                No te pierdas la acción de la WNBA. Cubrimos todos los partidos,
+                ofreciendo estadísticas clave y recomendaciones para que tus apuestas sean más informadas y exitosas.
+            </p>
+            <ul class="list-disc list-inside text-gray-400 mb-6">
+                <li>Estadísticas de equipos y jugadoras</li>
+                <li>Guías para principiantes y expertos</li>
+                <li>Noticias y actualizaciones de la liga</li>
+            </ul>
+            <button class="btn-primary w-full">Ver Pronósticos WNBA</button>
+        </section>
+
+        <section class="card md:col-span-2">
+            <h2 class="text-3xl font-bold text-blue-400 mb-4">Estadísticas Clave de la NBA</h2>
+            <p class="text-gray-300 mb-6">
+                Aquí encontrarás las estadísticas más relevantes de los jugadores titulares de la NBA.
+                Puedes actualizar esta tabla con los datos más recientes.
+            </p>
+            <div class="overflow-x-auto">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Equipo</th>
+                            <th>Jugador</th>
+                            <th>PPG</th>
+                            <th>RPG</th>
+                            <th>APG</th>
+                            <th>FG%</th>
+                            <th>3P%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Los Angeles Lakers</td>
+                            <td>LeBron James</td>
+                            <td>25.3</td>
+                            <td>7.2</td>
+                            <td>7.8</td>
+                            <td>50.6%</td>
+                            <td>30.3%</td>
+                        </tr>
+                        <tr>
+                            <td>Denver Nuggets</td>
+                            <td>Nikola Jokic</td>
+                            <td>26.4</td>
+                            <td>12.4</td>
+                            <td>9.0</td>
+                            <td>57.8%</td>
+                            <td>34.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Boston Celtics</td>
+                            <td>Jayson Tatum</td>
+                            <td>26.9</td>
+                            <td>8.0</td>
+                            <td>4.4</td>
+                            <td>47.1%</td>
+                            <td>37.6%</td>
+                        </tr>
+                        <tr>
+                            <td>Dallas Mavericks</td>
+                            <td>Luka Doncic</td>
+                            <td>33.9</td>
+                            <td>9.2</td>
+                            <td>9.8</td>
+                            <td>48.7%</td>
+                            <td>38.2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-gray-400 text-sm mt-4 italic">
+                *Para añadir más jugadores, copia una fila (`&lt;tr&gt;...&lt;/tr&gt;`) y edita los datos.
+            </p>
+        </section>
+
+        <section class="card md:col-span-2">
+            <h2 class="text-3xl font-bold text-pink-400 mb-4">Estadísticas Clave de la WNBA</h2>
+            <p class="text-gray-300 mb-6">
+                Consulta las estadísticas más importantes de las jugadoras titulares de la WNBA.
+                Actualiza esta tabla con los datos que consideres más relevantes.
+            </p>
+            <div class="overflow-x-auto">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Equipo</th>
+                            <th>Jugadora</th>
+                            <th>PPG</th>
+                            <th>RPG</th>
+                            <th>APG</th>
+                            <th>FG%</th>
+                            <th>3P%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Las Vegas Aces</td>
+                            <td>A'ja Wilson</td>
+                            <td>22.8</td>
+                            <td>9.5</td>
+                            <td>2.2</td>
+                            <td>55.7%</td>
+                            <td>34.4%</td>
+                        </tr>
+                        <tr>
+                            <td>New York Liberty</td>
+                            <td>Breanna Stewart</td>
+                            <td>23.0</td>
+                            <td>9.3</td>
+                            <td>3.8</td>
+                            <td>46.5%</td>
+                            <td>35.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Seattle Storm</td>
+                            <td>Jewell Loyd</td>
+                            <td>24.7</td>
+                            <td>3.3</td>
+                            <td>3.4</td>
+                            <td>37.8%</td>
+                            <td>35.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Phoenix Mercury</td>
+                            <td>Brittney Griner</td>
+                            <td>17.5</td>
+                            <td>6.3</td>
+                            <td>1.6</td>
+                            <td>59.1%</td>
+                            <td>0.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-gray-400 text-sm mt-4 italic">
+                *Para añadir más jugadoras, copia una fila (`&lt;tr&gt;...&lt;/tr&gt;`) y edita los datos.
+            </p>
+        </section>
+
+        <section class="card md:col-span-2">
+            <h2 class="text-3xl font-bold text-green-300 mb-4">Sobre LYKILLO_NBA</h2>
+            <p class="text-gray-300 mb-6">
+                En LYKILLO_NBA, nos apasiona el baloncesto y las apuestas deportivas.
+                Nuestro objetivo es proporcionarte la información más precisa y útil para que tomes las mejores decisiones.
+                ¡Únete a nuestra comunidad y empieza a ganar!
+            </p>
+            <div class="flex justify-center">
+                <a href="https://wa.me/573013341946" target="_blank" class="btn-primary mr-4 flex items-center justify-center">
+                    Contáctanos
+                </a>
+                <a href="https://t.me/PHgtYHBkSFJlNzMx" target="_blank" class="btn-primary flex items-center justify-center">
+                    Únete a la Comunidad
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-full max-w-4xl text-center text-gray-500 mt-8 p-4 bg-gray-800 rounded-xl shadow-lg">
+        <p>&copy; 2025 LYKILLO_NBA. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
